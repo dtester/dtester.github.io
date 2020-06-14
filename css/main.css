@@ -1,0 +1,37 @@
+:root {
+  --ui-primary-h: 199;
+  --ui-primary-s: 18%;
+  --ui-primary-l: 40%;
+  --ui-primary: var(--ui-primary-h), var(--ui-primary-s), var(--ui-primary-l);
+
+  --ui-active-h: 231;
+  --ui-active-s: 44%;
+  --ui-active-l: 56%;
+  --ui-active: var(--ui-active-h), var(--ui-active-s), var(--ui-active-l);
+}
+::placeholder {
+  color: hsla(var(--ui-primary), .4);
+  font-size: 1rem;
+}
+::selection {
+  background: hsla(var(--ui-primary), .3);
+  color: hsl(var(--ui-primary-h), var(--ui-primary-s), calc(var(--ui-primary-s) - 50%));
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.mdi {
+  display: inline;
+}
+.mdi > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.shadow {
+  box-shadow: 0 2px 2px rgba(0,0,0,.01),
+              0 4px 4px rgba(0,0,0,.02),
+              0 8px 8px rgba(0,0,0,.04);
+}
